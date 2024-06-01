@@ -1,0 +1,132 @@
+[
+    {
+        "nombre": "Malbec Reserva",
+        "imagenEtiqueta": true,
+        "precioARS": 1200.50,
+        "aniada": 2018,
+        "notaDeCataBodega": "Notas de ciruela y chocolate con un final largo y aterciopelado.",
+        "fechaActualizacion": "2024-05-31T12:00:00Z",
+        "bodega": {
+            "nombre": "Bodega Los Andes",
+            "ubicacion": "Mendoza, Argentina"
+        },
+        "maridajes": [
+            {
+                "comida": "Carne asada"
+            },
+            {
+                "comida": "Quesos curados"
+            }
+        ],
+        "varietales": [
+            {
+                "tipo": "Malbec",
+                "proporcion": 100
+            }
+        ]
+    },
+    {
+        "nombre": "Cabernet Sauvignon",
+        "imagenEtiqueta": false,
+        "precioARS": 1500.75,
+        "aniada": 2019,
+        "notaDeCataBodega": "Aromas de frutos rojos y especias con taninos firmes y elegantes.",
+        "fechaActualizacion": "2024-05-31T12:00:00Z",
+        "bodega": {
+            "nombre": "Bodega Los Andes",
+            "ubicacion": "San Rafael, Mendoza, Argentina"
+        },
+        "maridajes": [
+            {
+                "comida": "Cordero al horno"
+            },
+            {
+                "comida": "Estofado de ternera"
+            }
+        ],
+        "varietales": [
+            {
+                "tipo": "Cabernet Sauvignon",
+                "proporcion": 100
+            }
+        ]
+    },
+    {
+        "nombre": "Chardonnay",
+        "imagenEtiqueta": true,
+        "precioARS": 950.00,
+        "aniada": 2020,
+        "notaDeCataBodega": "Fresco y afrutado con notas de manzana verde y pera.",
+        "fechaActualizacion": "2024-05-31T12:00:00Z",
+        "bodega": {
+            "nombre": "Bodega Los Andes",
+            "ubicacion": "Valle de Uco, Argentina"
+        },
+        "maridajes": [
+            {
+                "comida": "Pescado a la parrilla"
+            },
+            {
+                "comida": "Ensaladas frescas"
+            }
+        ],
+        "varietales": [
+            {
+                "tipo": "Chardonnay",
+                "proporcion": 100
+            }
+        ]
+    },
+    {
+        "nombre": "Syrah",
+        "imagenEtiqueta": false,
+        "precioARS": 1100.00,
+        "aniada": 2017,
+        "notaDeCataBodega": "Intenso y especiado con notas de mora y pimienta negra.",
+        "fechaActualizacion": "2024-05-31T12:00:00Z",
+        "bodega": {
+            "nombre": "Bodega Los Andes",
+            "ubicacion": "San Juan, Argentina"
+        },
+        "maridajes": [
+            {
+                "comida": "BBQ de cerdo"
+            },
+            {
+                "comida": "Quesos azules"
+            }
+        ],
+        "varietales": [
+            {
+                "tipo": "Syrah",
+                "proporcion": 100
+            }
+        ]
+    },
+    {
+        "nombre": "Torrontés",
+        "imagenEtiqueta": true,
+        "precioARS": 780.00,
+        "aniada": 2021,
+        "notaDeCataBodega": "Aromático y floral con notas de durazno y jazmín.",
+        "fechaActualizacion": "2024-05-31T12:00:00Z",
+        "bodega": {
+            "nombre": "Bodega Los Andes",
+            "ubicacion": "Salta, Argentina"
+        },
+        "maridajes": [
+            {
+                "comida": "Comida asiática"
+            },
+            {
+                "comida": "Mariscos"
+            }
+        ],
+        "varietales": [
+            {
+                "tipo": "Torrontés",
+                "proporcion": 100
+            }
+        ]
+    }
+]
