@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PPAI.Entidades;
 using PPAI.Boundaries;
+using System.Reflection;
 
 namespace PPAI.Gestor
 {
@@ -18,6 +19,7 @@ namespace PPAI.Gestor
         public List<Maridaje>? MaridajeParaVinosACrear { get; set; }
         public List<TipoUva>? TipoUvaParaVinosACrear { get; set; }
         public List<Usuario>? NombresUsuariosSeguidoresDeBodega { get; set; }
+        public static List<string> bodegaActualizada = new List<string>();
 
         // Por defecto la ruta relativa hacia nuestra carpeta "Jsons" va a estar precedida por "\bin\Debug\net8.0-windows", por lo tanto utilizamos ..\..\..\ para acceder a ella
         private static string _rutaAPIsDelSistemaBodegas = @"..\..\..\Jsons\APIsDelSistema\Bodegas.json";
@@ -113,14 +115,22 @@ namespace PPAI.Gestor
             var listaVinosJson = InterfazAPIsBodegas.ObtenerVinosDeBodegaDeJSON(_rutaAPIsDelSistemaVinos);
             DatosDeVinosDeBodegaParaActualizar = InterfazAPIsBodegas.DeserializarJSON(listaVinosJson);
 
+            
+            MessageBox.Show("Resumen de actualización de " + nombreBodega + ": \n " + listaVinos);
+
+            /*
             foreach(Vino vinoImportado in listaVinos)
             {
+
                 //DatosDeVinosDeBodegaParaActualizar.Add( vino );
                 foreach(Vino vinoSistema in DatosDeVinosDeBodegaParaActualizar)
                 {
                     if (vinoImportado.Nombre.Equals(vinoSistema.Nombre))
                     {
-                        CompararCampos(vinoSistema, vinoImportado);
+                        if (CompararCampos(vinoSistema, vinoImportado))
+                        {
+                            MessageBox.Show("Se ha actualizado: " + nombreBodega + "\n" + bodegaActualizada);
+                        }
                         //MessageBox.Show($"{vinoSistema.Nombre} y {vinoImportado.Nombre} son iguales");
                         //MessageBox.Show(vinoImportado.ToString + " " + vinoSistema.ToString);
                         //if (vinoImportado.Equals(vinoSistema))
@@ -142,27 +152,46 @@ namespace PPAI.Gestor
             }
         }
 
-        private static void CompararCampos(Vino vinoSistema, Vino vinoImportado)
+        private static bool CompararCampos(Vino vinoSistema, Vino vinoImportado)
         {
             bool bandera = true;
-            foreach(var propiedad in vinoSistema.GetType().GetProperties())
+            //if (vinoSistema.ImagenEtiqueta == vinoImportado.ImagenEtiqueta)
+            //{
+            //    if (vinoSistema.PrecioArs == vinoImportado.PrecioArs)
+            //    {
+            //        if (vinoSistema.Aniada == vinoImportado.Aniada)
+            //        {
+            //            if(vinoSistema)
+            //        }
+            //    }
+            //}
+            PropertyInfo[] propiedades = vinoSistema.GetType().GetProperties();
+            
+            //Recorremos cada propiedad de un objeto "Vino" hasta "fechaUltimaActualizacion". Si pasamos de ahí compara objetos y arroja resultados imprecisos
+            for (int i = 0; i < 6; i++)
             {
-                var value1 = propiedad.GetValue(vinoSistema);
-                var value2 = propiedad.GetValue(vinoImportado);
-
-                if (!(value1.Equals(value2)))
+                PropertyInfo propiedad = propiedades[i];
+                var atributoVinoSistema = propiedad.GetValue(vinoSistema);
+                var atributoVinoImportado = propiedad.GetValue(vinoImportado);
+                
+                if (!(atributoVinoSistema.Equals(atributoVinoImportado)))
                 {
                     bandera = false;
+                    string cadenita = Convert.ToString(atributoVinoSistema) + " --> " + Convert.ToString(atributoVinoSistema) + "\n";
+                    bodegaActualizada.Add(cadenita);
                 }
             }
-            if (bandera == true) 
-            {
-                MessageBox.Show("To bien");
-            }
-            else
-            {
-                MessageBox.Show(vinoSistema.Nombre + " y " + vinoImportado.Nombre + " No son iguales");
-            }
+            return bandera;
+            
+            //if (bandera == true) 
+            //{
+            //    MessageBox.Show("To bien");
+            //}
+            //else
+            //{
+            //    MessageBox.Show(vinoSistema.Nombre + " y " + vinoImportado.Nombre + " No son iguales");
+            //}
+            */
         }
     }
 }
