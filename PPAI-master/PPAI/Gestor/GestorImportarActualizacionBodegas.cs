@@ -20,10 +20,11 @@ namespace PPAI.Gestor
         public List<Usuario>? NombresUsuariosSeguidoresDeBodega { get; set; }
 
         // Por defecto la ruta relativa hacia nuestra carpeta "Jsons" va a estar precedida por "\bin\Debug\net8.0-windows", por lo tanto utilizamos ..\..\..\ para acceder a ella
-        private static string _rutaAbsoluta = @"..\..\..\Jsons\APIsDelSistema\Bodegas.json";
-
-        private static string _rutaAPIsDelSistema = @"..\..\..\Jsons\APIsDelSistema\";
+        private static string _rutaAPIsDelSistemaBodegas = @"..\..\..\Jsons\APIsDelSistema\Bodegas.json";
+        private static string _rutaAPIsDelSistemaVinos = @"..\..\..\Jsons\APIsDelSistema\Vinos.json";
         private static string _rutaAPIsDeLasBodegas = @"..\..\..\Jsons\APIsDeLasBodegas\";
+        
+        
 
 
         /* Método anteriormente utilizado para obtener la ruta hacia "Jsons" pero es redundante ya que solo nos da la ruta absoluta
@@ -39,7 +40,7 @@ namespace PPAI.Gestor
         {
             string bodegasDeJson;
             //Forma estandar de leer un archivo de disco
-            using (var reader = new StreamReader(_rutaAbsoluta))
+            using (var reader = new StreamReader(_rutaAPIsDelSistemaBodegas))
             {
                 bodegasDeJson = reader.ReadToEnd();
             }
@@ -94,6 +95,7 @@ namespace PPAI.Gestor
             return actualizacionDisponible;
         }
 
+        //Tomamos todos los vinos de la API de la bodega seleccionada
         public static void TomarBodega(string nombreBodega)
         {
             MessageBox.Show("Seleccionaste: " + nombreBodega);
@@ -104,12 +106,11 @@ namespace PPAI.Gestor
 
         private static void ObtenerActualizacionDeBodegas(string nombreBodega)
         {
-            MessageBox.Show("Estas en el Gestor!!!");
-
             List<Vino> listaVinos = InterfazAPIsBodegas.ObtenerActualizacion(nombreBodega, _rutaAPIsDeLasBodegas);
             foreach(Vino vino in listaVinos)
             {
                 MessageBox.Show("El vino " + vino.Nombre + " pertenece a la bodega " + vino.Bodega.Nombre);
+                DatosDeVinosDeBodegaParaActualizar.Add( vino );
             }
         }
     }

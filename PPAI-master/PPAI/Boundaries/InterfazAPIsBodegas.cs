@@ -14,8 +14,7 @@ namespace PPAI.Boundaries
         //Obtener Actualizaciones de cada vino de la bodega
         public static List<Vino> ObtenerActualizacion(string nombreBodega, string _rutaAPIsDeLasBodegas)
         {
-            
-            string _rutaAPIBodega = $"{_rutaAPIsDeLasBodegas}{nombreBodega}.json"; //Ruta ensamblada que nos dirige a la API correspondiente
+            string _rutaAPIBodega = $"{_rutaAPIsDeLasBodegas}{nombreBodega}.json"; //Ruta ensamblada que nos dirige a la API de Bodega correspondiente
             var listaVinosJson = ObtenerVinosDeBodegaDeJSON(_rutaAPIBodega);
             List<Vino> listaVinosDeBodega = DeserializarJSON(listaVinosJson);
             
@@ -25,7 +24,6 @@ namespace PPAI.Boundaries
         public static string ObtenerVinosDeBodegaDeJSON(string _rutaAPIBodega)
         {
             string vinosDeJson;
-
             using (var reader = new StreamReader(_rutaAPIBodega))
             {
                 vinosDeJson = reader.ReadToEnd();
@@ -35,7 +33,6 @@ namespace PPAI.Boundaries
 
         public static List<Vino> DeserializarJSON(string listaVinosJSON)
         {
-
             var vinos = JsonConvert.DeserializeObject<List<Vino>>(listaVinosJSON);
             return vinos;
         }

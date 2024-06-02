@@ -47,7 +47,7 @@
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(223, 57);
             btnActualizar.TabIndex = 3;
-            btnActualizar.Text = "ACTUALIZAR";
+            btnActualizar.Text = "Actualizar Bodegas";
             btnActualizar.UseVisualStyleBackColor = true;
             btnActualizar.Click += TomarBodega;
             // 

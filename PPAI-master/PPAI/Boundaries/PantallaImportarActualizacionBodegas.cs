@@ -46,17 +46,23 @@ namespace PPAI
         {
             //Llamar método del gestor
             List<String> listaBodega = GestorImportarActualizacionBodegas.OpcionImportarActualizacionVinosBodega();
-
-
             if (importarActuPresionado == false)
             {
-                for (int i = 0; i < listaBodega.Count; i++)
+                if (listaBodega.Count == 0)
                 {
-                    PresentarBodegasParaActualizar(listaBodega[i]);
-                    importarActuPresionado = true;
+                    MessageBox.Show("No hay bodegas para actualizar, Estas al día!!!");
+                }
+                else
+                {
+                    for (int i = 0; i < listaBodega.Count; i++)
+                    {
+                        PresentarBodegasParaActualizar(listaBodega[i]);
+                        importarActuPresionado = true;
+                    }
                 }
             }
         }
+
         private void PresentarBodegasParaActualizar(String bodega)
         {
             DataGridViewRow filita = new DataGridViewRow();
@@ -68,17 +74,24 @@ namespace PPAI
             gridBodegasActualizar.Rows.Add(filita);
         }
 
+        //Le indicamos al gestor que tome todos los vinos de la API de la bodega seleccionada
         private void TomarBodega(object sender, EventArgs e)
         {
             //Llamar método del gestor
-            for (int i = 0; i < gridBodegasActualizar.Rows.Count; i++)
+            if (gridBodegasActualizar.Rows.Count == 0)
             {
-                bool seleccionadaBodega = Convert.ToBoolean(gridBodegasActualizar.Rows[i].Cells["Seleccionar"].Value);
-                if (seleccionadaBodega)
+                MessageBox.Show("No seleccionaste ninguna bodega");
+            }
+            else
+            {
+                for (int i = 0; i < gridBodegasActualizar.Rows.Count; i++)
                 {
-                    string nombreBodega = Convert.ToString(gridBodegasActualizar.Rows[i].Cells["Bodega"].Value);
-                    GestorImportarActualizacionBodegas.TomarBodega(nombreBodega);
-                    
+                    bool seleccionadaBodega = Convert.ToBoolean(gridBodegasActualizar.Rows[i].Cells["Seleccionar"].Value);
+                    if (seleccionadaBodega)
+                    {
+                        string nombreBodega = Convert.ToString(gridBodegasActualizar.Rows[i].Cells["Bodega"].Value);
+                        GestorImportarActualizacionBodegas.TomarBodega(nombreBodega);
+                    }
                 }
             }
         }
