@@ -105,7 +105,7 @@
     },
     {
         "nombre": "Bonarda",
-        "imagenEtiqueta": true,
+        "imagenEtiqueta": false,
         "precioARS": 1150.00,
         "aniada": 2017,
         "notaDeCataBodega": "Frutal y especiado con notas de cereza negra y pimienta.",

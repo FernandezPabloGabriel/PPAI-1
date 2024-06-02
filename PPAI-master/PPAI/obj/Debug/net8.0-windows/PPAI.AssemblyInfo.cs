@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PPAI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5971617aa9668c274f8b6146d0f966d6c4b30a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff9d621e134e7dbcdbdb6fb8d3814c6b007218f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("PPAI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PPAI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

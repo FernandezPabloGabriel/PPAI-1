@@ -31,6 +31,8 @@ namespace PPAI.Entidades
             this.varietales = varietales;
         }
 
+        
+
         public string Nombre
         {
             get => nombre;

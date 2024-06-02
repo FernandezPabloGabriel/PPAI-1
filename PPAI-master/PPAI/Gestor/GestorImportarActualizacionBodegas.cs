@@ -14,7 +14,7 @@ namespace PPAI.Gestor
         //Que es el signo de ?
         public List<Bodega>? bodegasParaActualizar {  get; set; }
         public Bodega? bodegaSeleccionada { get; set; }
-        public List<Vino>? DatosDeVinosDeBodegaParaActualizar { get; set; }
+        public static List<Vino>? DatosDeVinosDeBodegaParaActualizar { get; set; }
         public List<Maridaje>? MaridajeParaVinosACrear { get; set; }
         public List<TipoUva>? TipoUvaParaVinosACrear { get; set; }
         public List<Usuario>? NombresUsuariosSeguidoresDeBodega { get; set; }
@@ -106,11 +106,62 @@ namespace PPAI.Gestor
 
         private static void ObtenerActualizacionDeBodegas(string nombreBodega)
         {
+            //Vinos importados
             List<Vino> listaVinos = InterfazAPIsBodegas.ObtenerActualizacion(nombreBodega, _rutaAPIsDeLasBodegas);
-            foreach(Vino vino in listaVinos)
+
+            //Obtener lista de vinos del sistema
+            var listaVinosJson = InterfazAPIsBodegas.ObtenerVinosDeBodegaDeJSON(_rutaAPIsDelSistemaVinos);
+            DatosDeVinosDeBodegaParaActualizar = InterfazAPIsBodegas.DeserializarJSON(listaVinosJson);
+
+            foreach(Vino vinoImportado in listaVinos)
             {
-                MessageBox.Show("El vino " + vino.Nombre + " pertenece a la bodega " + vino.Bodega.Nombre);
-                DatosDeVinosDeBodegaParaActualizar.Add( vino );
+                //DatosDeVinosDeBodegaParaActualizar.Add( vino );
+                foreach(Vino vinoSistema in DatosDeVinosDeBodegaParaActualizar)
+                {
+                    if (vinoImportado.Nombre.Equals(vinoSistema.Nombre))
+                    {
+                        CompararCampos(vinoSistema, vinoImportado);
+                        //MessageBox.Show($"{vinoSistema.Nombre} y {vinoImportado.Nombre} son iguales");
+                        //MessageBox.Show(vinoImportado.ToString + " " + vinoSistema.ToString);
+                        //if (vinoImportado.Equals(vinoSistema))
+                        //{
+                        //    MessageBox.Show($"{vinoSistema.Nombre} y {vinoImportado.Nombre} son iguales");
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show($"{vinoSistema.Nombre} y {vinoImportado.Nombre} NOOOOOO son iguales");
+                        //}
+                        
+
+                    }
+                    //else
+                    //{
+                        
+                    //}
+                }
+            }
+        }
+
+        private static void CompararCampos(Vino vinoSistema, Vino vinoImportado)
+        {
+            bool bandera = true;
+            foreach(var propiedad in vinoSistema.GetType().GetProperties())
+            {
+                var value1 = propiedad.GetValue(vinoSistema);
+                var value2 = propiedad.GetValue(vinoImportado);
+
+                if (!(value1.Equals(value2)))
+                {
+                    bandera = false;
+                }
+            }
+            if (bandera == true) 
+            {
+                MessageBox.Show("To bien");
+            }
+            else
+            {
+                MessageBox.Show(vinoSistema.Nombre + " y " + vinoImportado.Nombre + " No son iguales");
             }
         }
     }
