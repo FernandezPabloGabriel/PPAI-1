@@ -4,7 +4,7 @@
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="PantallaImportarActualizacionBodegas.cs">
+    <Compile Update="Boundaries\PantallaImportarActualizacionBodegas.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

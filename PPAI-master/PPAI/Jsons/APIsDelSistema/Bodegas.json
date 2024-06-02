@@ -1,6 +1,6 @@
 [
     {
-        "nombre": "Bodega El Provenir",
+        "nombre": "Bodega El Porvenir",
         "descripcion": "Almacén principal de productos",
         "historia": "Fundada en 1950, la Bodega Central ha sido un pilar de la comunidad local",
         "periodoActualizacion": 2,
@@ -11,11 +11,11 @@
         ]
     },
     {
-        "nombre": "Bodega Los Andes",
+        "nombre": "El Mesón Hostigado",
         "descripcion": "Sucursal especializada en productos frescos",
         "historia": "Inaugurada en 2015, la Bodega Norte ofrece una amplia variedad de frutas, verduras y alimentos perecederos",
         "periodoActualizacion": 3,
-        "fechaUltimaActualizacion": "2024-02-02",
+        "fechaUltimaActualizacion": "2024-05-02",
         "coordenadasUbicacion": [
             40.7679,
             -74.1758
@@ -26,11 +26,10 @@
         "descripcion": "Centro de distribución regional",
         "historia": "Construida en 2002, la Bodega Sur sirve como punto de partida para la distribución de productos a otras sucursales",
         "periodoActualizacion": 2,
-        "fechaUltimaActualizacion": "2024-01-05",
+        "fechaUltimaActualizacion": "2024-02-05",
         "coordenadasUbicacion": [
             40.6892,
             -74.2003
         ]
     }
-
 ]

@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\pantallaimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:pantallaimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\jsons\\apisdelasbodegas\\el bodegon.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:jsons\\apisdelasbodegas\\el bodegon.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\entidades\\bodega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:entidades\\bodega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\boundaries\\interfazapisbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:boundaries\\interfazapisbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\gestor\\gestorimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:gestor\\gestorimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\pantallaimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:pantallaimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\jsons\\apisdelasbodegas\\bodega el porvenir.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:jsons\\apisdelasbodegas\\bodega el porvenir.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\boundaries\\pantallaimportaractualizacionbodegas.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:boundaries\\pantallaimportaractualizacionbodegas.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\jsons\\apisdelsistema\\bodegas.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:jsons\\apisdelsistema\\bodegas.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\boundaries\\pantallaimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:boundaries\\pantallaimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\boundaries\\pantallaimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:boundaries\\pantallaimportaractualizacionbodegas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|c:\\users\\usuario\\desktop\\c#\\ppai-master\\ppai-master\\ppai\\ppai.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3AD01B33-9E4A-431C-9B73-A164F392A2AD}|PPAI.csproj|solutionrelative:ppai.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,23 +42,90 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PantallaImportarActualizacionBodegas.resx",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Boundaries\\PantallaImportarActualizacionBodegas.resx",
+              "RelativeDocumentMoniker": "Boundaries\\PantallaImportarActualizacionBodegas.resx",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Boundaries\\PantallaImportarActualizacionBodegas.resx",
+              "RelativeToolTip": "Boundaries\\PantallaImportarActualizacionBodegas.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-06-02T03:52:36.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InterfazAPIsBodegas.cs",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Boundaries\\InterfazAPIsBodegas.cs",
+              "RelativeDocumentMoniker": "Boundaries\\InterfazAPIsBodegas.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Boundaries\\InterfazAPIsBodegas.cs",
+              "RelativeToolTip": "Boundaries\\InterfazAPIsBodegas.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T03:35:17.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PPAI.csproj",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\PPAI.csproj",
+              "RelativeDocumentMoniker": "PPAI.csproj",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\PPAI.csproj",
+              "RelativeToolTip": "PPAI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-06-02T03:31:27.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "El Bodegon.json",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Jsons\\APIsDeLasBodegas\\El Bodegon.json",
+              "RelativeDocumentMoniker": "Jsons\\APIsDeLasBodegas\\El Bodegon.json",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Jsons\\APIsDeLasBodegas\\El Bodegon.json",
+              "RelativeToolTip": "Jsons\\APIsDeLasBodegas\\El Bodegon.json",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-01T21:36:08.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PantallaImportarActualizacionBodegas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Boundaries\\PantallaImportarActualizacionBodegas.cs",
+              "RelativeDocumentMoniker": "Boundaries\\PantallaImportarActualizacionBodegas.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Boundaries\\PantallaImportarActualizacionBodegas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Boundaries\\PantallaImportarActualizacionBodegas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T21:09:01.673Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PantallaImportarActualizacionBodegas.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\PantallaImportarActualizacionBodegas.cs",
-              "RelativeDocumentMoniker": "PantallaImportarActualizacionBodegas.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\PantallaImportarActualizacionBodegas.cs [Dise\u00F1o]",
-              "RelativeToolTip": "PantallaImportarActualizacionBodegas.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T16:17:53.266Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "Title": "Bodega El Porvenir.json",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Jsons\\APIsDeLasBodegas\\Bodega El Porvenir.json",
+              "RelativeDocumentMoniker": "Jsons\\APIsDeLasBodegas\\Bodega El Porvenir.json",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Jsons\\APIsDeLasBodegas\\Bodega El Porvenir.json",
+              "RelativeToolTip": "Jsons\\APIsDeLasBodegas\\Bodega El Porvenir.json",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAABEAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-01T20:09:20.598Z"
             },
             {
               "$type": "Document",
@@ -64,74 +135,21 @@
               "RelativeDocumentMoniker": "Gestor\\GestorImportarActualizacionBodegas.cs",
               "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Gestor\\GestorImportarActualizacionBodegas.cs",
               "RelativeToolTip": "Gestor\\GestorImportarActualizacionBodegas.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAWAAAA",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAawGoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T16:14:46.697Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Bodega.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Entidades\\Bodega.cs",
-              "RelativeDocumentMoniker": "Entidades\\Bodega.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Entidades\\Bodega.cs",
-              "RelativeToolTip": "Entidades\\Bodega.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBsAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T04:58:46.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-01T16:14:46.697Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Bodegas.json",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Jsons\\APIsDelSistema\\Bodegas.json",
-              "RelativeDocumentMoniker": "Jsons\\APIsDelSistema\\Bodegas.json",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Jsons\\APIsDelSistema\\Bodegas.json",
-              "RelativeToolTip": "Jsons\\APIsDelSistema\\Bodegas.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-01T03:58:28.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\LoginForm.cs",
-              "RelativeToolTip": "LoginForm.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAvwCsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T03:57:48.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\LoginForm.cs",
-              "RelativeDocumentMoniker": "LoginForm.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\LoginForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "LoginForm.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T03:57:46.494Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "PantallaImportarActualizacionBodegas.cs",
-              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\PantallaImportarActualizacionBodegas.cs",
-              "RelativeDocumentMoniker": "PantallaImportarActualizacionBodegas.cs",
-              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\PantallaImportarActualizacionBodegas.cs",
-              "RelativeToolTip": "PantallaImportarActualizacionBodegas.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAkwFYAAAANAAAA",
+              "DocumentMoniker": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Boundaries\\PantallaImportarActualizacionBodegas.cs",
+              "RelativeDocumentMoniker": "Boundaries\\PantallaImportarActualizacionBodegas.cs",
+              "ToolTip": "C:\\Users\\USUARIO\\Desktop\\C#\\PPAI-master\\PPAI-master\\PPAI\\Boundaries\\PantallaImportarActualizacionBodegas.cs",
+              "RelativeToolTip": "Boundaries\\PantallaImportarActualizacionBodegas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T03:56:41.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-01T03:56:41.701Z"
             }
           ]
         }

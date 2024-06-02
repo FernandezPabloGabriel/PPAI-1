@@ -24,39 +24,40 @@
             btnActualizar = new Button();
             label1 = new Label();
             gridBodegasActualizar = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewCheckBoxColumn1 = new DataGridViewCheckBoxColumn();
+            Bodega = new DataGridViewTextBoxColumn();
+            Seleccionar = new DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)gridBodegasActualizar).BeginInit();
             SuspendLayout();
             // 
             // btnImportarActu
             // 
-            btnImportarActu.Location = new Point(212, 164);
+            btnImportarActu.Location = new Point(197, 169);
             btnImportarActu.Margin = new Padding(3, 4, 3, 4);
             btnImportarActu.Name = "btnImportarActu";
             btnImportarActu.Size = new Size(223, 57);
             btnImportarActu.TabIndex = 0;
             btnImportarActu.Text = "Importar Actualizaciones";
             btnImportarActu.UseVisualStyleBackColor = true;
-            btnImportarActu.Click += PantallaImportarActualizacionBodegas_Load;
+            btnImportarActu.Click += OpcionImportarActualizacionVinosBodega;
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(742, 51);
+            btnActualizar.Location = new Point(434, 169);
             btnActualizar.Margin = new Padding(3, 4, 3, 4);
             btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(101, 71);
+            btnActualizar.Size = new Size(223, 57);
             btnActualizar.TabIndex = 3;
             btnActualizar.Text = "ACTUALIZAR";
             btnActualizar.UseVisualStyleBackColor = true;
-            btnActualizar.Click += btnActualizar_Click;
+            btnActualizar.Click += TomarBodega;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(312, 51);
+            label1.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(107, 38);
             label1.Name = "label1";
-            label1.Size = new Size(224, 20);
+            label1.Size = new Size(655, 54);
             label1.TabIndex = 4;
             label1.Text = "Seleccione los vinos a actualizar:";
             // 
@@ -67,7 +68,7 @@
             gridBodegasActualizar.AllowUserToResizeColumns = false;
             gridBodegasActualizar.AllowUserToResizeRows = false;
             gridBodegasActualizar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            gridBodegasActualizar.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewCheckBoxColumn1 });
+            gridBodegasActualizar.Columns.AddRange(new DataGridViewColumn[] { Bodega, Seleccionar });
             gridBodegasActualizar.Location = new Point(197, 252);
             gridBodegasActualizar.Name = "gridBodegasActualizar";
             gridBodegasActualizar.RowHeadersWidth = 51;
@@ -75,26 +76,25 @@
             gridBodegasActualizar.TabIndex = 6;
             gridBodegasActualizar.CellContentClick += gridBodegaActualizar_CellContentClick;
             // 
-            // dataGridViewTextBoxColumn1
+            // Bodega
             // 
-            dataGridViewTextBoxColumn1.HeaderText = "Bodega";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            dataGridViewTextBoxColumn1.Width = 250;
+            Bodega.HeaderText = "Bodega";
+            Bodega.MinimumWidth = 6;
+            Bodega.Name = "Bodega";
+            Bodega.ReadOnly = true;
+            Bodega.Width = 250;
             // 
-            // dataGridViewCheckBoxColumn1
+            // Seleccionar
             // 
-            dataGridViewCheckBoxColumn1.HeaderText = "Seleccionar";
-            dataGridViewCheckBoxColumn1.MinimumWidth = 6;
-            dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            dataGridViewCheckBoxColumn1.Width = 125;
+            Seleccionar.HeaderText = "Seleccionar";
+            Seleccionar.MinimumWidth = 6;
+            Seleccionar.Name = "Seleccionar";
+            Seleccionar.Width = 125;
             // 
             // PantallaImportarActualizacionBodegas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.BonVinito;
             ClientSize = new Size(866, 591);
             Controls.Add(gridBodegasActualizar);
             Controls.Add(label1);
@@ -117,7 +117,7 @@
         private Button btnActualizar;
         private Label label1;
         private DataGridView gridBodegasActualizar;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private DataGridViewTextBoxColumn Bodega;
+        private DataGridViewCheckBoxColumn Seleccionar;
     }
 }
