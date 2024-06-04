@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace PPAI.Entidades
 {
@@ -26,6 +27,33 @@ namespace PPAI.Entidades
             get => descripcion;
             set => descripcion = value;
         }
+
+        /*
+        public List<TipoUva> EsTipoUva()
+        {
+            var  = GetContactsJsonFromFile(@"..\..\APIsDelSistema\maridajes.json");
+            var maridajes = DeserializeJsonFromFile(maridajesJson);
+
+            return maridajes;
+        }
+
+
+        public static string GetContactsJsonFromFile(string ruta)
+        {
+            string maridajesJsonFromFile;
+            using (var reader = new StreamReader(ruta))
+            {
+                maridajesJsonFromFile = reader.ReadToEnd();
+            }
+            return maridajesJsonFromFile;
+        }
+
+
+        public static List<Maridaje> DeserializeJsonFromFile(string contactsJsonFromFile)
+        {
+            var maridajes = JsonConvert.DeserializeObject<List<Maridaje>>(contactsJsonFromFile);
+            return maridajes;
+        }*/
     }
 }
 

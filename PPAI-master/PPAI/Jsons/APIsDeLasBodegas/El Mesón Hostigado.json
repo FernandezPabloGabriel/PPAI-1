@@ -12,16 +12,18 @@
         },
         "maridajes": [
             {
-                "comida": "Carne asada"
+                "nombre": "Pizza",
+                "descripcion": "-"
             },
             {
-                "comida": "Quesos curados"
+                "nombre": "Guisos",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Malbec",
-                "proporcion": 100
+                "descripcion": "Buenardo",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -38,16 +40,18 @@
         },
         "maridajes": [
             {
-                "comida": "Cordero al horno"
+                "nombre": "Pizza a la piedra",
+                "descripcion": "-"
             },
             {
-                "comida": "Estofado de ternera"
+                "nombre": "Fideo a la pomarola",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Cabernet Sauvignon",
-                "proporcion": 100
+                "descripcion": "Golozales marginados",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -64,16 +68,18 @@
         },
         "maridajes": [
             {
-                "comida": "Pescado a la parrilla"
+                "nombre": "Arroz al vapor",
+                "descripcion": "-"
             },
             {
-                "comida": "Ensaladas frescas"
+                "nombre": "Huevo centenario",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Chardonnay",
-                "proporcion": 100
+                "descripcion": "Agrios y con personalidad",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -90,16 +96,18 @@
         },
         "maridajes": [
             {
-                "comida": "BBQ de cerdo"
+                "nombre": "BBQ porcino",
+                "descripcion": "-"
             },
             {
-                "comida": "Quesos azules"
+                "nombre": "Quesos azules",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Syrah",
-                "proporcion": 100
+                "descripcion": "Uvon",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -116,16 +124,14 @@
         },
         "maridajes": [
             {
-                "comida": "Comida asiática"
-            },
-            {
-                "comida": "Mariscos"
+                "nombre": "Mariscos",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Torrontés",
-                "proporcion": 100
+                "descripcion": "Golozales marginados",
+                "porcentajeComposicion": 100
             }
         ]
     }

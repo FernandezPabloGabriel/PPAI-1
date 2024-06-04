@@ -1,8 +1,8 @@
 [
     {
         "nombre": "Pinot Noir",
-        "imagenEtiqueta": true,
-        "precioARS": 1500.00,
+        "imagenEtiqueta": false,
+        "precioARS": 1400.00,
         "aniada": 2020,
         "notaDeCataBodega": "Elegante y suave con aromas de cereza y notas de tierra.",
         "fechaActualizacion": "2024-05-31T12:00:00Z",
@@ -12,16 +12,19 @@
         },
         "maridajes": [
             {
-                "comida": "Pato confitado"
+                "nombre": "Pato confitado",
+                "descripcion": "-"
             },
             {
-                "comida": "Setas a la parrilla"
+                "nombre": "Setas a la parrilla",
+                "descripcion": "-"
+
             }
         ],
         "varietales": [
             {
-                "tipo": "Pinot Noir",
-                "proporcion": 100
+                "descripcion": "Pinot Noir",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -38,16 +41,14 @@
         },
         "maridajes": [
             {
-                "comida": "Pollo a la parrilla"
-            },
-            {
-                "comida": "Pasta con salsa de tomate"
+                "nombre": "Pollo a la parrilla",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Merlot",
-                "proporcion": 100
+                "descripcion": "Pinot Noir",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -64,16 +65,19 @@
         },
         "maridajes": [
             {
-                "comida": "Cordero a la brasa"
+                "nombre": "Cordero a la brasa",
+                "descripcion": "-"
             },
             {
-                "comida": "Paella"
+                "nombre": "Paella",
+                "descripcion": "-"
+
             }
         ],
         "varietales": [
             {
-                "tipo": "Tempranillo",
-                "proporcion": 100
+                "descripcion": "Pinot Noir",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -90,16 +94,14 @@
         },
         "maridajes": [
             {
-                "comida": "Mariscos"
-            },
-            {
-                "comida": "Ensaladas de verano"
+                "nombre": "Mariscos",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Sauvignon Blanc",
-                "proporcion": 100
+                "descripcion": "Pinot Noir",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -116,20 +118,21 @@
         },
         "maridajes": [
             {
-                "comida": "Pizza"
+                "nombre": "Pizza",
+                "descripcion": "-"
             },
             {
-                "comida": "Guisos"
+                "nombre": "Guisos",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Bonarda",
-                "proporcion": 100
+                "descripcion": "Buenardo",
+                "porcentajeComposicion": 100
             }
         ]
     },
-
     {
         "nombre": "Viognier",
         "imagenEtiqueta": false,
@@ -143,16 +146,18 @@
         },
         "maridajes": [
             {
-                "comida": "Pescado blanco"
+                "nombre": "Pescado blanco",
+                "descripcion": "-"
             },
             {
-                "comida": "Curry suave"
+                "nombre": "Curry suave",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Viognier",
-                "proporcion": 100
+                "descripcion": "Viognier",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -169,16 +174,18 @@
         },
         "maridajes": [
             {
-                "comida": "Estofados"
+                "nombre": "Estafados",
+                "descripcion": "-"
             },
             {
-                "comida": "Carnes rojas"
+                "nombre": "Carne rojas",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Petit Verdot",
-                "proporcion": 100
+                "descripcion": "Voce par Renui",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -195,16 +202,14 @@
         },
         "maridajes": [
             {
-                "comida": "Asado"
-            },
-            {
-                "comida": "Quesos añejos"
+                "nombre": "Asado",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Tannat",
-                "proporcion": 100
+                "descripcion": "Gruñon pero manejable",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -221,42 +226,46 @@
         },
         "maridajes": [
             {
-                "comida": "Costillas de cerdo"
+                "nombre": "Guiso de lenteja",
+                "descripcion": "-"
             },
             {
-                "comida": "Platos mexicanos"
+                "nombre": "Polenta",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Zinfandel",
-                "proporcion": 100
+                "descripcion": "Uva refinada a la interperie por maestros griegos descalsos",
+                "porcentajeComposicion": 100
             }
         ]
     },
     {
+        "nombre": "Grüner Veltliner",
+        "imagenEtiqueta": false,
+        "precioARS": 950.00,
         "aniada": 2021,
+        "notaDeCataBodega": "Fresco y picante con notas de cítricos y pimienta blanca.",
+        "fechaActualizacion": "2024-05-31T12:00:00Z",
         "bodega": {
             "nombre": "El Bodegon",
             "ubicacion": "Mendoza, Argentina"
         },
-        "fechaActualizacion": "2024-05-31T12:00:00Z",
-        "imagenEtiqueta": false,
         "maridajes": [
             {
-                "comida": "Sushi"
+                "nombre": "Sushi",
+                "descripcion": "-"
             },
             {
-                "comida": "Platos vegetarianos"
+                "nombre": "Sopa de murcielagos",
+                "descripcion": "-"
             }
         ],
-        "nombre": "Grüner Veltliner",
-        "notaDeCataBodega": "Fresco y picante con notas de cítricos y pimienta blanca.",
-        "precioARS": 950.00,
         "varietales": [
             {
-                "tipo": "Grüner Veltliner",
-                "proporcion": 100
+                "descripcion": "Placeres culposos",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -273,16 +282,18 @@
         },
         "maridajes": [
             {
-                "comida": "Carne asada"
+                "nombre": "Pizza",
+                "descripcion": "-"
             },
             {
-                "comida": "Quesos curados"
+                "nombre": "Guisos",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Malbec",
-                "proporcion": 100
+                "descripcion": "Buenardo",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -299,16 +310,18 @@
         },
         "maridajes": [
             {
-                "comida": "Cordero al horno"
+                "nombre": "Pizza a la piedra",
+                "descripcion": "-"
             },
             {
-                "comida": "Estofado de ternera"
+                "nombre": "Fideo a la pomarola",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Cabernet Sauvignon",
-                "proporcion": 100
+                "descripcion": "Golozales marginados",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -325,16 +338,18 @@
         },
         "maridajes": [
             {
-                "comida": "Pescado a la parrilla"
+                "nombre": "Arroz al vapor",
+                "descripcion": "-"
             },
             {
-                "comida": "Ensaladas frescas"
+                "nombre": "Huevo centenario",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Chardonnay",
-                "proporcion": 100
+                "descripcion": "Agrios y con personalidad",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -351,16 +366,18 @@
         },
         "maridajes": [
             {
-                "comida": "BBQ de cerdo"
+                "nombre": "BBQ porcino",
+                "descripcion": "-"
             },
             {
-                "comida": "Quesos azules"
+                "nombre": "Quesos azules",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Syrah",
-                "proporcion": 100
+                "descripcion": "Uvon",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -377,16 +394,14 @@
         },
         "maridajes": [
             {
-                "comida": "Comida asiática"
-            },
-            {
-                "comida": "Mariscos"
+                "nombre": "Mariscos",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Torrontés",
-                "proporcion": 100
+                "descripcion": "Golozales marginados",
+                "porcentajeComposicion": 100
             }
         ]
     }

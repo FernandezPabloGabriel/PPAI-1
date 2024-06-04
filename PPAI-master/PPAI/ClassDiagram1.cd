@@ -3,19 +3,19 @@
   <Class Name="PPAI.Entidades.Bodega">
     <Position X="1.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AYAEAACAAAAAAACAAAEAhAABAAQAAAAAAAAAAAEAAAg=</HashCode>
+      <HashCode>AYAECACAAAAAAACAAAEAhAABAAQAAAAAAAAAAAEAAAg=</HashCode>
       <FileName>Entidades\Bodega.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PPAI.Entidades.Enofilo">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Position X="4" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAoAAAAAAAABAAACAAAAAgAAA=</HashCode>
+      <HashCode>FAAAABAAAAQAAACEAAAAgAAAAAAEAAQAAAAEAAAAAAA=</HashCode>
       <FileName>Entidades\Enofilo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PPAI.Entidades.Maridaje" Collapsed="true">
-    <Position X="4.5" Y="1" Width="1.5" />
+    <Position X="4.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAEAgAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entidades\Maridaje.cs</FileName>
@@ -24,7 +24,7 @@
   <Class Name="PPAI.Entidades.Siguiendo" Collapsed="true">
     <Position X="6.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAACAAAAAgAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAgAAACAAAAAgAAAAAAACAAAAAgAAA=</HashCode>
       <FileName>Entidades\Siguiendo.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -43,29 +43,30 @@
     </TypeIdentifier>
   </Class>
   <Class Name="PPAI.Entidades.Varietal">
-    <Position X="3.75" Y="2.25" Width="1.5" />
+    <Position X="4.5" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAEAAAgAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAEAAAgBAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Entidades\Varietal.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PPAI.Entidades.Vino">
-    <Position X="6.25" Y="1.75" Width="1.5" />
+    <Position X="9.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAYAAAAAQAAAAEAAAgAoAAAAAAAAAEAAAABAAAiABA=</HashCode>
+      <HashCode>AAAYAAAAACAAAAGgAAgQgAAAAAAAAAEAACIBABAiIIA=</HashCode>
       <FileName>Entidades\Vino.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PPAI.PantallaImportarActualizacionBodegas" Collapsed="true">
     <Position X="4.75" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAADAAAACAAAACAAAIAAAAIAAAgAAAAAA=</HashCode>
+      <HashCode>AAAAAEAIACAAADAgAICAQAACgAACgAAAAAAAAAAAIBA=</HashCode>
+      <FileName>Boundaries\PantallaImportarActualizacionBodegas.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PPAI.Gestor.GestorImportarActualizacionBodegas">
     <Position X="8" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAEkEgAAEAgQAIAAAAUAAAAkAAQAgAAAAABgACAAIA=</HashCode>
       <FileName>Gestor\GestorImportarActualizacionBodegas.cs</FileName>
     </TypeIdentifier>
   </Class>

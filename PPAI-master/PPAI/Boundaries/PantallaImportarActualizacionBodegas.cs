@@ -45,42 +45,45 @@ namespace PPAI
         private void OpcionImportarActualizacionVinosBodega(object sender, EventArgs e)
         {
             //Llamar método del gestor
-            List<String> listaBodega = GestorImportarActualizacionBodegas.OpcionImportarActualizacionVinosBodega();
+            List<String> listaNombreBodegas = GestorImportarActualizacionBodegas.OpcionImportarActualizacionVinosBodega();
             if (importarActuPresionado == false)
             {
-                if (listaBodega.Count == 0)
+                if (listaNombreBodegas.Count == 0)
                 {
                     MessageBox.Show("No hay bodegas para actualizar, Estas al día!!!");
                 }
                 else
                 {
-                    for (int i = 0; i < listaBodega.Count; i++)
+                    for (int i = 0; i < listaNombreBodegas.Count; i++)
                     {
-                        PresentarBodegasParaActualizar(listaBodega[i]);
+                        PresentarBodegasParaActualizar(listaNombreBodegas[i]);
                         importarActuPresionado = true;
                     }
                 }
             }
         }
 
+
         private void PresentarBodegasParaActualizar(String bodega)
         {
             DataGridViewRow filita = new DataGridViewRow();
 
-            DataGridViewTextBoxCell celdaNomBodega = new DataGridViewTextBoxCell();
-            celdaNomBodega.Value = bodega;
+            //DataGridViewTextBoxCell celdaNomBodega = new DataGridViewTextBoxCell();
+            //celdaNomBodega.Value = bodega;
 
-            filita.Cells.Add(celdaNomBodega);
+            filita.Cells.Add(new DataGridViewTextBoxCell() { Value = bodega });
             gridBodegasActualizar.Rows.Add(filita);
         }
+
 
         //Le indicamos al gestor que tome todos los vinos de la API de la bodega seleccionada
         private void TomarBodega(object sender, EventArgs e)
         {
+            bool haySeleccion = false;
             //Llamar método del gestor
             if (gridBodegasActualizar.Rows.Count == 0)
             {
-                MessageBox.Show("No seleccionaste ninguna bodega");
+                MessageBox.Show("No hay bodegas a seleccionar");
             }
             else
             {
@@ -91,7 +94,14 @@ namespace PPAI
                     {
                         string nombreBodega = Convert.ToString(gridBodegasActualizar.Rows[i].Cells["Bodega"].Value);
                         GestorImportarActualizacionBodegas.TomarBodega(nombreBodega);
+                        gridBodegasActualizar.Rows[i].Cells["Seleccionar"].Value = false;
+                        gridBodegasActualizar.Rows[i].Visible = false;
+                        haySeleccion = true;
                     }
+                }
+                if (haySeleccion == false) 
+                {
+                    MessageBox.Show("Por favor selecciona una bodega para actualizar");
                 }
             }
         }

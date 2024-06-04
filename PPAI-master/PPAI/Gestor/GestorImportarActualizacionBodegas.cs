@@ -19,7 +19,7 @@ namespace PPAI.Gestor
         public List<Maridaje>? MaridajeParaVinosACrear { get; set; }
         public List<TipoUva>? TipoUvaParaVinosACrear { get; set; }
         public List<Usuario>? NombresUsuariosSeguidoresDeBodega { get; set; }
-        public static List<string> bodegaActualizada = new List<string>();
+        public static List<string> vinoActualizado = new List<string>();
 
         // Por defecto la ruta relativa hacia nuestra carpeta "Jsons" va a estar precedida por "\bin\Debug\net8.0-windows", por lo tanto utilizamos ..\..\..\ para acceder a ella
         private static string _rutaAPIsDelSistemaBodegas = @"..\..\..\Jsons\APIsDelSistema\Bodegas.json";
@@ -27,16 +27,14 @@ namespace PPAI.Gestor
         private static string _rutaAPIsDeLasBodegas = @"..\..\..\Jsons\APIsDeLasBodegas\";
         
         
-
-
         /* Método anteriormente utilizado para obtener la ruta hacia "Jsons" pero es redundante ya que solo nos da la ruta absoluta
         private static string _rutaAbsoluta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, _rutaBodegas);*/
-
         public static List<String> OpcionImportarActualizacionVinosBodega()
         {
             List <String> listaNombreBodegas = BuscarBodegaParaActualizar();
             return listaNombreBodegas;
         }
+
 
         public static string ObtenerBodegasDeJSON()
         {
@@ -49,12 +47,13 @@ namespace PPAI.Gestor
             return bodegasDeJson;
         }
 
+
         public static List<Bodega> DeserializarJSON(string bodegasDeJSON)
         {
-
             var bodegas = JsonConvert.DeserializeObject<List<Bodega>>(bodegasDeJSON);
             return bodegas;
         }
+
 
         //Devuelve array de strings que contiene los nombres de las bodegas a actualizar
         private static List<String> BuscarBodegaParaActualizar()
@@ -63,7 +62,6 @@ namespace PPAI.Gestor
             string bodegasDeJson = ObtenerBodegasDeJSON();
             //Transformamos las bodegas de json a formato array de objetos y las guardamos en el array listaBodega
             List<Bodega> listaBodega = DeserializarJSON(bodegasDeJson);
-
             List<string> nombreBodegas = new List<string>();
 
             foreach (var bodega in listaBodega)
@@ -72,11 +70,11 @@ namespace PPAI.Gestor
                 {
                     nombreBodegas.Add(bodega.Nombre);
                 }
-
             }
 
             return nombreBodegas;
         }
+
 
         // Método que comprueba, por medio de la diferencia de meses entre fechas, si una bodega está en su periodo de actualización o no -Devuelve un booleano-
         private static bool ExisteActualizacionDisponible(Bodega bodega)
@@ -97,101 +95,141 @@ namespace PPAI.Gestor
             return actualizacionDisponible;
         }
 
+
         //Tomamos todos los vinos de la API de la bodega seleccionada
         public static void TomarBodega(string nombreBodega)
         {
             MessageBox.Show("Seleccionaste: " + nombreBodega);
             ObtenerActualizacionDeBodegas(nombreBodega);
+
         }
 
 
 
         private static void ObtenerActualizacionDeBodegas(string nombreBodega)
-        {
+        { 
+            bool hayActualizacion = false;
             //Vinos importados
-            List<Vino> listaVinos = InterfazAPIsBodegas.ObtenerActualizacion(nombreBodega, _rutaAPIsDeLasBodegas);
-
+            List<Vino> listaVinosImportados = InterfazAPIsBodegas.ObtenerActualizacion(nombreBodega, _rutaAPIsDeLasBodegas);
             //Obtener lista de vinos del sistema
             var listaVinosJson = InterfazAPIsBodegas.ObtenerVinosDeBodegaDeJSON(_rutaAPIsDelSistemaVinos);
             DatosDeVinosDeBodegaParaActualizar = InterfazAPIsBodegas.DeserializarJSON(listaVinosJson);
 
-            
-            MessageBox.Show("Resumen de actualización de " + nombreBodega + ": \n " + listaVinos);
+            List<string> listaNombresVinosImportados = new List<string>();
+            List<string> listaNombresVinosSistemas = new List<string>();
 
-            /*
-            foreach(Vino vinoImportado in listaVinos)
+            foreach (Vino vino in listaVinosImportados) { listaNombresVinosImportados.Add(vino.Nombre); }
+            foreach (Vino vino in DatosDeVinosDeBodegaParaActualizar) { listaNombresVinosSistemas.Add(vino.Nombre); }
+
+            foreach (string nomVinoImportado in listaNombresVinosImportados)
             {
-
                 //DatosDeVinosDeBodegaParaActualizar.Add( vino );
-                foreach(Vino vinoSistema in DatosDeVinosDeBodegaParaActualizar)
+                bool contieneVinoElSistema = listaNombresVinosSistemas.Contains(nomVinoImportado);
+                if( contieneVinoElSistema)
                 {
-                    if (vinoImportado.Nombre.Equals(vinoSistema.Nombre))
-                    {
-                        if (CompararCampos(vinoSistema, vinoImportado))
-                        {
-                            MessageBox.Show("Se ha actualizado: " + nombreBodega + "\n" + bodegaActualizada);
-                        }
-                        //MessageBox.Show($"{vinoSistema.Nombre} y {vinoImportado.Nombre} son iguales");
-                        //MessageBox.Show(vinoImportado.ToString + " " + vinoSistema.ToString);
-                        //if (vinoImportado.Equals(vinoSistema))
-                        //{
-                        //    MessageBox.Show($"{vinoSistema.Nombre} y {vinoImportado.Nombre} son iguales");
-                        //}
-                        //else
-                        //{
-                        //    MessageBox.Show($"{vinoSistema.Nombre} y {vinoImportado.Nombre} NOOOOOO son iguales");
-                        //}
-                        
+                    Vino vinoSistema = new Vino();
+                    Vino vinoImportado = new Vino();
 
+                    //Obtenemos los objetos de tipo vino cuyos nombres sean iguales
+                    foreach (Vino vino in listaVinosImportados) { if (vino.Nombre == nomVinoImportado) { vinoImportado = vino; } }
+                    foreach (Vino vino in DatosDeVinosDeBodegaParaActualizar) { if (vino.Nombre == nomVinoImportado) { vinoSistema = vino; } }
+
+                    if (CompararCampos(vinoSistema, vinoImportado))
+                    {
+                        hayActualizacion = true;
                     }
-                    //else
-                    //{
-                        
-                    //}
+                }
+                else 
+                {
+                    Vino vinoImportado = new Vino();
+                    foreach (Vino vino in listaVinosImportados) { if (vino.Nombre == nomVinoImportado) { vinoImportado = vino; } }
+                    string vinoCreado = CrearNuevoVino(vinoImportado);
+                    vinoActualizado.Add("\n-----------------------------------" + vinoCreado);
+                    hayActualizacion = true;
                 }
             }
+
+            if (hayActualizacion)
+            {
+                string cadena = $"Resumen de {nombreBodega}:";
+                foreach (var vino in vinoActualizado)
+                {
+                    cadena += $"{vino}";
+                }
+                MessageBox.Show(cadena);
+                MessageBox.Show("Se enviaron las notificaciones a los Seguidores de la bodega!");
+            }
+            else
+            {
+                MessageBox.Show($"{nombreBodega} está al día!");
+            }
+            vinoActualizado = [];
         }
+
 
         private static bool CompararCampos(Vino vinoSistema, Vino vinoImportado)
         {
-            bool bandera = true;
-            //if (vinoSistema.ImagenEtiqueta == vinoImportado.ImagenEtiqueta)
-            //{
-            //    if (vinoSistema.PrecioArs == vinoImportado.PrecioArs)
-            //    {
-            //        if (vinoSistema.Aniada == vinoImportado.Aniada)
-            //        {
-            //            if(vinoSistema)
-            //        }
-            //    }
-            //}
-            PropertyInfo[] propiedades = vinoSistema.GetType().GetProperties();
+            bool hayDiferencia = false;
+            string cadenita = "";
+            PropertyInfo[] propiedades = typeof(Vino).GetProperties();
+            
             
             //Recorremos cada propiedad de un objeto "Vino" hasta "fechaUltimaActualizacion". Si pasamos de ahí compara objetos y arroja resultados imprecisos
-            for (int i = 0; i < 6; i++)
+            for (int i = 1; i < 6; i++)
             {
                 PropertyInfo propiedad = propiedades[i];
-                var atributoVinoSistema = propiedad.GetValue(vinoSistema);
-                var atributoVinoImportado = propiedad.GetValue(vinoImportado);
-                
+                object atributoVinoSistema = propiedad.GetValue(vinoSistema);
+                object atributoVinoImportado = propiedad.GetValue(vinoImportado);
+
                 if (!(atributoVinoSistema.Equals(atributoVinoImportado)))
                 {
-                    bandera = false;
-                    string cadenita = Convert.ToString(atributoVinoSistema) + " --> " + Convert.ToString(atributoVinoSistema) + "\n";
-                    bodegaActualizada.Add(cadenita);
+                    hayDiferencia = true;
+                    cadenita += $"\n | {propiedad}: {atributoVinoSistema} --> {atributoVinoImportado}";
                 }
             }
-            return bandera;
+            if (hayDiferencia)
+            {
+                vinoActualizado.Add($"\n-----------------------------------\nSe actualizó el vino: '{vinoSistema.Nombre}': {cadenita}");
+            }
             
-            //if (bandera == true) 
-            //{
-            //    MessageBox.Show("To bien");
-            //}
-            //else
-            //{
-            //    MessageBox.Show(vinoSistema.Nombre + " y " + vinoImportado.Nombre + " No son iguales");
-            //}
-            */
+            return hayDiferencia;
+        }
+
+
+        private static string CrearNuevoVino(Vino vinoImportado)
+        {
+            string cadena = "";
+
+            cadena += "\nSe añadió el vino: " + vinoImportado.Nombre;
+            cadena += "\n | Imagen: " + vinoImportado.ImagenEtiqueta;
+            cadena += "\n | Precio ARS: " + vinoImportado.PrecioArs;
+            cadena += "\n | Añada: " + vinoImportado.Aniada;
+            cadena += "\n | Nota de Cata: " + vinoImportado.NotaDeCataBodega;
+            cadena += "\n | Maridajes: ";
+            foreach (Maridaje marida in vinoImportado.Maridajes) 
+            {
+                cadena += "'" + marida.Nombre + "' ";
+            }
+            cadena += "\n | Varietales: ";
+            foreach (Varietal varietal in vinoImportado.Varietales)
+            {
+                cadena += "'" + varietal.Descripcion + "' ";
+            }
+            
+
+            return cadena;
+        }
+
+
+        private static void BuscarMaridaje()
+        {
+//           List<Maridaje> listaMaridajes = Maridaje.MaridaConVino(maridajeImportado);
+        }
+
+
+        private static void BuscarTipoUva()
+        {
+  //          TipoUva.EsTipoUva();
         }
     }
 }
