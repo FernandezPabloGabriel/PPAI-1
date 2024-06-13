@@ -12,16 +12,18 @@
         },
         "maridajes": [
             {
-                "comida": "Pescado blanco"
+                "nombre": "Pescado blanco",
+                "descripcion":  "-"
             },
             {
-                "comida": "Curry suave"
+                "nombre": "Curry suave",
+                "descripcion":  "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Viognier",
-                "proporcion": 100
+                "descripcion": "Viognier",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -38,16 +40,18 @@
         },
         "maridajes": [
             {
-                "comida": "Estofados"
+                "nombre": "Estafados",
+                "descripcion": "-"
             },
             {
-                "comida": "Carnes rojas"
+                "nombre": "Carne rojas",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Petit Verdot",
-                "proporcion": 100
+                "descripcion": "Voce par Renui",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -64,16 +68,14 @@
         },
         "maridajes": [
             {
-                "comida": "Asado"
-            },
-            {
-                "comida": "Quesos añejos"
+                "nombre": "Asado",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Tannat",
-                "proporcion": 100
+                "descripcion": "Gruñon pero manejable",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -90,16 +92,18 @@
         },
         "maridajes": [
             {
-                "comida": "Costillas de cerdo"
+                "nombre": "Guiso de lenteja",
+                "descripcion": "-"
             },
             {
-                "comida": "Platos mexicanos"
+                "nombre": "Polenta",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Zinfandel",
-                "proporcion": 100
+                "descripcion": "Uva refinada a la interperie por maestros griegos descalsos",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -116,16 +120,46 @@
         },
         "maridajes": [
             {
-                "comida": "Sushi"
+                "nombre": "Sushi",
+                "descripcion": "-"
             },
             {
-                "comida": "Platos vegetarianos"
+                "nombre": "Sopa de murcielagos",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Grüner Veltliner",
-                "proporcion": 100
+                "descripcion": "Placeres culposos",
+                "porcentajeComposicion": 100
+            }
+        ]
+    },
+    {
+        "nombre": "Chateau Margaux",
+        "imagenEtiqueta": true,
+        "precioARS": 6100000.00,
+        "aniada": 2001,
+        "notaDeCataBodega": "Puro, bastante herbal y salvaje, casi sauvage, con bayas rojas y más oscuras, salvia, un poco de menta también. Unas notas florales de iris aparecen con la aireación. Y también hay cereza, sobre todo piel de cereza. Muy puro e intenso, con taninos de una finura impresionante. El regaliz aporta una delicada salinidad. Quizás le falta un poco de complejidad, ciertamente en comparación con el grand vin, pero su textura es ciertamente muy fina.",
+        "fechaActualizacion": "2024-05-31T12:00:00Z",
+        "bodega": {
+            "nombre": "El Bodegon",
+            "ubicacion": "Mendoza, Argentina"
+        },
+        "maridajes": [
+            {
+                "nombre": "Pescado negro",
+                "descripcion": "-"
+            },
+            {
+                "nombre": "Merluza a la parrilla",
+                "descripcion": "-"
+            }
+        ],
+        "varietales": [
+            {
+                "descripcion": "Uvas traviesas",
+                "porcentajeComposicion": 100
             }
         ]
     }

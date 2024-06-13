@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Entidades"
+    "\\Entidades",
+    "\\Gestor"
   ],
-  "SelectedNode": "\\LoginForm.cs",
+  "SelectedNode": "\\Gestor\\GestorImportarActualizacionBodegas.cs",
   "PreviewInSolutionExplorer": false
 }

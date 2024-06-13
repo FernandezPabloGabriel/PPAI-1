@@ -12,16 +12,19 @@
         },
         "maridajes": [
             {
-                "comida": "Pato confitado"
+                "nombre": "Pato confitado",
+                "descripcion":  "-"
             },
             {
-                "comida": "Setas a la parrilla"
+                "nombre": "Setas a la parrilla",
+                "descripcion": "-"
+
             }
         ],
         "varietales": [
             {
-                "tipo": "Pinot Noir",
-                "proporcion": 100
+                "descripcion": "Pinot Noir",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -38,16 +41,14 @@
         },
         "maridajes": [
             {
-                "comida": "Pollo a la parrilla"
-            },
-            {
-                "comida": "Pasta con salsa de tomate"
+                "nombre": "Pollo a la parrilla",
+                "descripcion": "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Merlot",
-                "proporcion": 100
+                "descripcion": "Pinot Noir",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -64,16 +65,19 @@
         },
         "maridajes": [
             {
-                "comida": "Cordero a la brasa"
+                "nombre": "Cordero a la brasa",
+                "descripcion": "-"
             },
             {
-                "comida": "Paella"
+                "nombre": "Paella",
+                "descripcion": "-"
+
             }
         ],
         "varietales": [
             {
-                "tipo": "Tempranillo",
-                "proporcion": 100
+                "descripcion": "Pinot Noir",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -90,16 +94,14 @@
         },
         "maridajes": [
             {
-                "comida": "Mariscos"
-            },
-            {
-                "comida": "Ensaladas de verano"
+                "nombre": "Mariscos",
+                "descripcion":  "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Sauvignon Blanc",
-                "proporcion": 100
+                "descripcion": "Pinot Noir",
+                "porcentajeComposicion": 100
             }
         ]
     },
@@ -116,16 +118,18 @@
         },
         "maridajes": [
             {
-                "comida": "Pizza"
+                "nombre": "Pizza",
+                "descripcion":  "-"
             },
             {
-                "comida": "Guisos"
+                "nombre": "Guisos",
+                "descripcion":  "-"
             }
         ],
         "varietales": [
             {
-                "tipo": "Bonarda",
-                "proporcion": 100
+                "descripcion": "Buenardo",
+                "porcentajeComposicion": 100
             }
         ]
     }

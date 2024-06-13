@@ -18,19 +18,21 @@ namespace PPAI.Entidades
         private List<Maridaje> maridajes;
         private List<Varietal> varietales;
 
-        public Vino(string nombre, bool imagenEtiqueta, float precioARS, int aniada, string notaDeCataBodega, DateTime fechaActualizacion, Bodega bodega, List<Maridaje> maridajes, List<Varietal> varietales)
-        {
-            this.nombre = nombre;
-            this.imagenEtiqueta = imagenEtiqueta;
-            this.precioARS = precioARS;
-            this.aniada = aniada;
-            this.notaDeCataBodega = notaDeCataBodega;
-            this.fechaActualizacion = fechaActualizacion;
-            this.bodega = bodega;
-            this.maridajes = maridajes;
-            this.varietales = varietales;
-        }
+        //public Vino(string nombre, bool imagenEtiqueta, float precioARS, int aniada, string notaDeCataBodega, DateTime fechaActualizacion, Bodega bodega, List<Maridaje> maridajes, List<Varietal> varietales)
+        //{
+        //    this.nombre = nombre;
+        //    this.imagenEtiqueta = imagenEtiqueta;
+        //    this.precioARS = precioARS;
+        //    this.aniada = aniada;
+        //    this.notaDeCataBodega = notaDeCataBodega;
+        //    this.fechaActualizacion = fechaActualizacion;
+        //    this.bodega = bodega;
+        //    this.maridajes = maridajes;
+        //    this.varietales = varietales;
+        //}
 
+
+        
         public string Nombre
         {
             get => nombre;
@@ -73,7 +75,7 @@ namespace PPAI.Entidades
             set => bodega = value;
         }
 
-        public List<Maridaje> Maridages
+        public List<Maridaje> Maridajes
         {
             get => maridajes;
             set => maridajes = value;
