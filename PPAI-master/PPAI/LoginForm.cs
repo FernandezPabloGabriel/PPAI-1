@@ -36,7 +36,7 @@ namespace PPAI
             if (txtUsuario.Text.Equals(usuCorrecto) && txtContraseña.Text.Equals(passCorrecta) && esPremium is true)
             {   
                 // Nombre de usuario y contraseña correctos
-                PantallaImportarActualizacionBodegas ventana = new PantallaImportarActualizacionBodegas(usu);
+                PantallaImportarActualizacionBodegas ventana = new PantallaImportarActualizacionBodegas();
                 ventana.Show();
                 this.Hide();
             }

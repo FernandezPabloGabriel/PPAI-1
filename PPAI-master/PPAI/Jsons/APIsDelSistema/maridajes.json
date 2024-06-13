@@ -1,0 +1,22 @@
+[
+      {
+        "nombre": "Carnes",
+        "descripcion": "Carnes rojas para vinos tintos, carnes blancas para vinos blancos y aves para vinos con buena acidez."
+      },
+      {
+        "nombre": "Pescados",
+        "descripcion": "Pescados blancos para vinos blancos secos y aromaticos. Pescados grasos para vinos tintos ligeros o blancos con cuerpo"
+      },
+      {
+        "nombre": "Quesos",
+        "descripcion": "Quesos frescos para vinos rosados. Quesos azules para vinos dulces fortificados."
+      },
+      {
+        "nombre": "Postres",
+        "descripcion": "Postres de frutas para vinos espumosos. Postres de crema para vinos blancos secos o espumosos"
+      },
+      {
+        "nombre": "Mariscos",
+        "descripcion": "Camarones rebozados para vinos tintos finos y rabas para vinos blancos"
+      }
+    ]

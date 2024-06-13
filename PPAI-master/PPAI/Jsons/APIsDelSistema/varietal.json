@@ -1,0 +1,117 @@
+[
+    {
+        "descripción": "Base tinto",
+        "porcentajeComposicion": 75.0,
+        "tipoUva": "Cabernet sauvignon"
+    },
+    {
+        "descripción": "Herbalidad",
+        "porcentajeComposicion": 2.0,
+        "tipoUva": "Cabernet Franc"
+    },
+    {
+        "descripción": "Notas de cedro y especias",
+        "porcentajeComposicion": 3.0,
+        "tipoUva": "Petit Verdot"
+    },
+    {
+        "descripción": "Redondez y aroma a ciruela",
+        "porcentajeComposicion": 20.0,
+        "tipoUva": "Merlot"
+    },
+    {
+        "descripción": "Elegancia y finura",
+        "porcentajeComposicion": 100.0,
+        "tipoUva": "Pinot Noir"
+    },
+    {
+        "descripción": "Tinto con menta",
+        "porcentajeComposicion": 25.0,
+        "tipoUva": "Shiraz"
+    },
+    {
+        "descripción": "Base tinto fino",
+        "porcentajeComposicion": 80.0,
+        "tipoUva": "Tempranillo"
+    },
+    {
+        "descripción": "Mucha herbalidad",
+        "porcentajeComposicion": 5.0,
+        "tipoUva": "Cabernet Franc"
+    },
+    {
+        "descripción": "Muchas notas de cedro",
+        "porcentajeComposicion": 5.0,
+        "tipoUva": "Petit Verdot"
+    },
+    {
+        "descripción": "Complejidad y estructura",
+        "porcentajeComposicion": 25.0,
+        "tipoUva": "Malbec"
+    },
+    {
+        "descripción": "Poco tinto",
+        "porcentajeComposicion": 15.0,
+        "tipoUva": "Cabernet sauvignon"
+    },
+    {
+        "descripción": "Estructura y acidez",
+        "porcentajeComposicion": 80.0,
+        "tipoUva": "Sangiovese"
+    },
+    {
+        "descripción": "Tinto aroma a rosas",
+        "porcentajeComposicion": 100.0,
+        "tipoUva": "Nebbiolo"
+    },
+    {
+        "descripción": "Tinto toro",
+        "porcentajeComposicion": 80.0,
+        "tipoUva": "Tinta de toro"
+    },
+    {
+        "descripción": "Frutosidad y redondez",
+        "porcentajeComposicion": 20.0,
+        "tipoUva": "Garnacha"
+    },
+    {
+        "descripción": "Mucha frutosidad y redondez",
+        "porcentajeComposicion": 75.0,
+        "tipoUva": "Garnacha"
+    },
+    {
+        "descripción": "Tinto con poca menta",
+        "porcentajeComposicion": 15.0,
+        "tipoUva": "Shiraz"
+    },
+    {
+        "descripción": "Estructura y aroma a violetas",
+        "porcentajeComposicion": 10.0,
+        "tipoUva": "Monastrell"
+    },
+    {
+        "descripción": "Vino blanco y elegante",
+        "porcentajeComposicion": 100.0,
+        "tipoUva": "Chardonnay"
+    },
+    {
+        "descripción": "Cuerpo y aroma a frutas y miel",
+        "porcentajeComposicion": 80.0,
+        "tipoUva": "Semillón"
+    },
+    {
+        "descripción": "Acidez y frescura",
+        "porcentajeComposicion": 20.0,
+        "tipoUva": "Sauvignon blanc"
+    },
+    {
+        "descripción": "Frutas blancas y citricas",
+        "porcentajeComposicion": 100.0,
+        "tipoUva": "Pinot gris"
+    },
+    {
+        "descripción": "Mucha acidez y frescura",
+        "porcentajeComposicion": 100.0,
+        "tipoUva": "Sauvignon blanc"
+    }
+]

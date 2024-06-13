@@ -20,7 +20,7 @@ namespace PPAI
 {
     public partial class PantallaImportarActualizacionBodegas : Form
     {
-        public PantallaImportarActualizacionBodegas(Usuario usu)
+        public PantallaImportarActualizacionBodegas()
         {
             InitializeComponent();
         }
