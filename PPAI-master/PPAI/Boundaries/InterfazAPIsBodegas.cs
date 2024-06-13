@@ -5,36 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PPAI.Entidades;
+using PPAI.Recursos_Extra;
 
 
 namespace PPAI.Boundaries
 {
     public class InterfazAPIsBodegas
     {
-        //Obtener Actualizaciones de cada vino de la bodega
+        //11°) Obtener las últimas actualizaciones de los vinos de las APIs de las bodegas registradas en el sistema
         public static List<Vino> ObtenerActualizacion(string nombreBodega, string _rutaAPIsDeLasBodegas)
         {
             string _rutaAPIBodega = $"{_rutaAPIsDeLasBodegas}{nombreBodega}.json"; //Ruta ensamblada que nos dirige a la API de Bodega correspondiente
-            var listaVinosJson = ObtenerVinosDeBodegaDeJSON(_rutaAPIBodega);
-            List<Vino> listaVinosDeBodega = DeserializarJSON(listaVinosJson);
+            Deserializador<Vino> deserializador = new Deserializador<Vino>();
+            List<Vino> listaVinosImportados = deserializador.RecuperarJson(_rutaAPIBodega);
             
-            return listaVinosDeBodega;
-        }
-
-        public static string ObtenerVinosDeBodegaDeJSON(string _rutaAPIBodega)
-        {
-            string vinosDeJson;
-            using (var reader = new StreamReader(_rutaAPIBodega))
-            {
-                vinosDeJson = reader.ReadToEnd();
-            }
-            return vinosDeJson;
-        }
-
-        public static List<Vino> DeserializarJSON(string listaVinosJSON)
-        {
-            var vinos = JsonConvert.DeserializeObject<List<Vino>>(listaVinosJSON);
-            return vinos;
+            return listaVinosImportados;
         }
     }
 }

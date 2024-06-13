@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using PPAI.Entidades;
 using PPAI.Boundaries;
 using System.Reflection;
+using PPAI.Recursos_Extra;
 
 namespace PPAI.Gestor
 {
@@ -25,95 +26,57 @@ namespace PPAI.Gestor
         private static string _rutaAPIsDelSistemaBodegas = @"..\..\..\Jsons\APIsDelSistema\Bodegas.json";
         private static string _rutaAPIsDelSistemaVinos = @"..\..\..\Jsons\APIsDelSistema\Vinos.json";
         private static string _rutaAPIsDeLasBodegas = @"..\..\..\Jsons\APIsDeLasBodegas\";
-        
-        
-        /* Método anteriormente utilizado para obtener la ruta hacia "Jsons" pero es redundante ya que solo nos da la ruta absoluta
-        private static string _rutaAbsoluta = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, _rutaBodegas);*/
+
+       
+        //3°) ¿Que este devuelva la lista de string?
         public static List<String> OpcionImportarActualizacionVinosBodega()
         {
-            List <String> listaNombreBodegas = BuscarBodegaParaActualizar();
+            List<String> listaNombreBodegas = BuscarBodegaParaActualizar();
             return listaNombreBodegas;
         }
 
 
-        public static string ObtenerBodegasDeJSON()
-        {
-            string bodegasDeJson;
-            //Forma estandar de leer un archivo de disco
-            using (var reader = new StreamReader(_rutaAPIsDelSistemaBodegas))
-            {
-                bodegasDeJson = reader.ReadToEnd();
-            }
-            return bodegasDeJson;
-        }
-
-
-        public static List<Bodega> DeserializarJSON(string bodegasDeJSON)
-        {
-            var bodegas = JsonConvert.DeserializeObject<List<Bodega>>(bodegasDeJSON);
-            return bodegas;
-        }
-
-
-        //Devuelve array de strings que contiene los nombres de las bodegas a actualizar
+        //4°) Devuelve array de strings que contiene los nombres de las bodegas a actualizar
         private static List<String> BuscarBodegaParaActualizar()
         {
-            //Obtenemos los datos de cada bodega desde el archivo JSON Bodegas.json
-            string bodegasDeJson = ObtenerBodegasDeJSON();
-            //Transformamos las bodegas de json a formato array de objetos y las guardamos en el array listaBodega
-            List<Bodega> listaBodega = DeserializarJSON(bodegasDeJson);
-            List<string> nombreBodegas = new List<string>();
-
-            foreach (var bodega in listaBodega)
+            //Utilizamos la clase "Deserealizador" para que esta extraiga los datos del JSON y nos devuelva le array de objetos respectivo
+            Deserializador<Bodega> deserializador = new Deserializador<Bodega>();
+            List<Bodega> listaBodegas = deserializador.RecuperarJson(_rutaAPIsDelSistemaBodegas);
+            
+            //Extraemos los nombres de la lista de bodegas
+            List<string> listaNombreBodegas = new List<string>();
+            foreach (Bodega bodega in listaBodegas)
             {
-                if (ExisteActualizacionDisponible(bodega))
+                //Utilización de 5°) y 6°)
+                if (bodega.ExisteActualizacionDisponible())
                 {
-                    nombreBodegas.Add(bodega.Nombre);
+                    listaNombreBodegas.Add(bodega.Nombre);
                 }
             }
 
-            return nombreBodegas;
+            return listaNombreBodegas;
         }
 
 
-        // Método que comprueba, por medio de la diferencia de meses entre fechas, si una bodega está en su periodo de actualización o no -Devuelve un booleano-
-        private static bool ExisteActualizacionDisponible(Bodega bodega)
-        {
-            DateTime fechaHoy = DateTime.Now;
-            bool actualizacionDisponible = false;
-
-            int diferenciaMeses = fechaHoy.Month - bodega.FechaUltimaActualizacion.Month;
-            if (diferenciaMeses > bodega.PeriodoActualizacion)
-            {
-                actualizacionDisponible = true;
-            }
-            else if (diferenciaMeses == bodega.PeriodoActualizacion && fechaHoy.Day >= bodega.FechaUltimaActualizacion.Day)
-            {
-                actualizacionDisponible = true;
-            }
-
-            return actualizacionDisponible;
-        }
-
-
-        //Tomamos todos los vinos de la API de la bodega seleccionada
+        
+        //9°) Tomamos todos los vinos de la API "externa" de la bodega seleccionada
         public static void TomarBodega(string nombreBodega)
         {
-            MessageBox.Show("Seleccionaste: " + nombreBodega);
+            //MessageBox.Show("Seleccionaste: " + nombreBodega);
             ObtenerActualizacionDeBodegas(nombreBodega);
 
         }
 
 
-
+        //10°)
         private static void ObtenerActualizacionDeBodegas(string nombreBodega)
         { 
             bool hayActualizacion = false;
             //Vinos importados
             List<Vino> listaVinosImportados = InterfazAPIsBodegas.ObtenerActualizacion(nombreBodega, _rutaAPIsDeLasBodegas);
             //Obtener lista de vinos del sistema
-            var listaVinosJson = InterfazAPIsBodegas.ObtenerVinosDeBodegaDeJSON(_rutaAPIsDelSistemaVinos);
-            DatosDeVinosDeBodegaParaActualizar = InterfazAPIsBodegas.DeserializarJSON(listaVinosJson);
+            Deserializador<Vino> deserializador = new Deserializador<Vino>();
+            DatosDeVinosDeBodegaParaActualizar = deserializador.RecuperarJson(_rutaAPIsDelSistemaVinos);
 
             List<string> listaNombresVinosImportados = new List<string>();
             List<string> listaNombresVinosSistemas = new List<string>();
@@ -231,5 +194,9 @@ namespace PPAI.Gestor
         {
   //          TipoUva.EsTipoUva();
         }
+
+
+        /*-----METODOS AUXILIARES-----*/
+
     }
 }

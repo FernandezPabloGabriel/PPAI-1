@@ -22,16 +22,17 @@
         {
             btnImportarActu = new Button();
             btnActualizar = new Button();
-            label1 = new Label();
+            lblTitulo = new Label();
             gridBodegasActualizar = new DataGridView();
             Bodega = new DataGridViewTextBoxColumn();
             Seleccionar = new DataGridViewCheckBoxColumn();
+            lblAyuda = new Label();
             ((System.ComponentModel.ISupportInitialize)gridBodegasActualizar).BeginInit();
             SuspendLayout();
             // 
             // btnImportarActu
             // 
-            btnImportarActu.Location = new Point(197, 169);
+            btnImportarActu.Location = new Point(314, 188);
             btnImportarActu.Margin = new Padding(3, 4, 3, 4);
             btnImportarActu.Name = "btnImportarActu";
             btnImportarActu.Size = new Size(223, 57);
@@ -42,24 +43,26 @@
             // 
             // btnActualizar
             // 
-            btnActualizar.Location = new Point(434, 169);
+            btnActualizar.Location = new Point(314, 188);
             btnActualizar.Margin = new Padding(3, 4, 3, 4);
             btnActualizar.Name = "btnActualizar";
             btnActualizar.Size = new Size(223, 57);
             btnActualizar.TabIndex = 3;
             btnActualizar.Text = "Actualizar Bodegas";
             btnActualizar.UseVisualStyleBackColor = true;
+            btnActualizar.Visible = false;
             btnActualizar.Click += TomarBodega;
             // 
-            // label1
+            // lblTitulo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(107, 38);
-            label1.Name = "label1";
-            label1.Size = new Size(655, 54);
-            label1.TabIndex = 4;
-            label1.Text = "Seleccione los vinos a actualizar:";
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(182, 36);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(499, 54);
+            lblTitulo.TabIndex = 4;
+            lblTitulo.Text = "Bienvenido a BONVINO!";
+            lblTitulo.TextAlign = ContentAlignment.TopCenter;
             // 
             // gridBodegasActualizar
             // 
@@ -69,12 +72,12 @@
             gridBodegasActualizar.AllowUserToResizeRows = false;
             gridBodegasActualizar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gridBodegasActualizar.Columns.AddRange(new DataGridViewColumn[] { Bodega, Seleccionar });
-            gridBodegasActualizar.Location = new Point(197, 252);
+            gridBodegasActualizar.Location = new Point(197, 265);
             gridBodegasActualizar.Name = "gridBodegasActualizar";
             gridBodegasActualizar.RowHeadersWidth = 51;
             gridBodegasActualizar.Size = new Size(460, 188);
             gridBodegasActualizar.TabIndex = 6;
-            gridBodegasActualizar.CellContentClick += gridBodegaActualizar_CellContentClick;
+            gridBodegasActualizar.Visible = false;
             // 
             // Bodega
             // 
@@ -91,13 +94,23 @@
             Seleccionar.Name = "Seleccionar";
             Seleccionar.Width = 125;
             // 
+            // lblAyuda
+            // 
+            lblAyuda.AutoSize = true;
+            lblAyuda.Location = new Point(197, 140);
+            lblAyuda.Name = "lblAyuda";
+            lblAyuda.Size = new Size(471, 20);
+            lblAyuda.TabIndex = 7;
+            lblAyuda.Text = "Presione el botón para importar las bodegas en periodo de actualizar";
+            // 
             // PantallaImportarActualizacionBodegas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(866, 591);
+            Controls.Add(lblAyuda);
             Controls.Add(gridBodegasActualizar);
-            Controls.Add(label1);
+            Controls.Add(lblTitulo);
             Controls.Add(btnActualizar);
             Controls.Add(btnImportarActu);
             Margin = new Padding(3, 4, 3, 4);
@@ -115,9 +128,10 @@
 
         private Button btnImportarActu;
         private Button btnActualizar;
-        private Label label1;
+        private Label lblTitulo;
         private DataGridView gridBodegasActualizar;
         private DataGridViewTextBoxColumn Bodega;
         private DataGridViewCheckBoxColumn Seleccionar;
+        private Label lblAyuda;
     }
 }

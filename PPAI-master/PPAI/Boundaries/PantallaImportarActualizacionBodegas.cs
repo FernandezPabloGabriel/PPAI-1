@@ -15,84 +15,99 @@ using PPAI.Entidades;
 using System.IO;
 using Newtonsoft.Json;
 using PPAI.Gestor;
+using System.Reflection.Emit;
+using PPAI.Recursos_Extra;
+
 
 namespace PPAI
 {
     public partial class PantallaImportarActualizacionBodegas : Form
     {
-        public PantallaImportarActualizacionBodegas()
+        public PantallaImportarActualizacionBodegas() //La función que habilita los componentes de la pantalla
         {
             InitializeComponent();
         }
 
+
+        //Lo que hará la pantalla al cargarse
         private void PantallaImportarActualizacionBodegas_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        bool importarActuPresionado = false;
+        /*
+         * --------------------------------------------
+         * ----------------- PASO 1. ------------------
+         * --------------------------------------------
+         */
 
-        private void gridBodegasActualizar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void gridBodegaActualizar_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        //1°) Método que hace referencia a la presión del botón de mismo nombre que nos habilitará el grid
         private void OpcionImportarActualizacionVinosBodega(object sender, EventArgs e)
         {
-            //Llamar método del gestor
+            
+            habilitarPantalla();
+            
+            //Llamar método del gestor, guardamos en una lista de string los nombres de bodegas devueltos
             List<String> listaNombreBodegas = GestorImportarActualizacionBodegas.OpcionImportarActualizacionVinosBodega();
-            if (importarActuPresionado == false)
+
+            //Validamos si hay actualizaciones disponibles, si las hay llamamos al método "presentarBodegasParaActualizar" de la interfaz 
+            if (listaNombreBodegas.Count == 0)
             {
-                if (listaNombreBodegas.Count == 0)
+                MessageBox.Show("No hay bodegas para actualizar, Estas al día!!!");
+            }
+            else
+            {
+                for (int i = 0; i < listaNombreBodegas.Count; i++)
                 {
-                    MessageBox.Show("No hay bodegas para actualizar, Estas al día!!!");
-                }
-                else
-                {
-                    for (int i = 0; i < listaNombreBodegas.Count; i++)
-                    {
-                        PresentarBodegasParaActualizar(listaNombreBodegas[i]);
-                        importarActuPresionado = true;
-                    }
+                    PresentarBodegasParaActualizar(listaNombreBodegas[i]);
                 }
             }
         }
 
 
-        private void PresentarBodegasParaActualizar(String bodega)
+        //2°)
+        private void habilitarPantalla()
         {
-            DataGridViewRow filita = new DataGridViewRow();
+            //Declaramos objeto de tipo BarraDeCarga y la llamamos posteriormente
+            BarraDeCarga barraDeCarga = new BarraDeCarga();
+            barraDeCarga.ShowDialog();
 
-            //DataGridViewTextBoxCell celdaNomBodega = new DataGridViewTextBoxCell();
-            //celdaNomBodega.Value = bodega;
-
-            filita.Cells.Add(new DataGridViewTextBoxCell() { Value = bodega });
-            gridBodegasActualizar.Rows.Add(filita);
+            //Cambiamos algunos valores de los componentes para que se visualice posteriormente las bodegas a actualizar
+            lblTitulo.Text = "Seleccione los vinos a actualizar: ";
+            lblAyuda.Visible = false;
+            gridBodegasActualizar.Visible = true;
+            btnActualizar.Visible = true;
+            btnImportarActu.Visible = false;
         }
 
 
-        //Le indicamos al gestor que tome todos los vinos de la API de la bodega seleccionada
+        //7°)
+        private void PresentarBodegasParaActualizar(String nombreBodega)
+        {
+            DataGridViewRow fila = new DataGridViewRow(); //Creamos una nueva fila del dataGridView
+            fila.Cells.Add(new DataGridViewTextBoxCell() { Value = nombreBodega }); //Añadimos celda con el valor del nombre de la bodega
+            gridBodegasActualizar.Rows.Add(fila); //Añadimos la fila al dataGridView
+        }
+
+
+
+        //8°) Le indicamos al gestor que tome todos los vinos de la API de la bodega seleccionada
         private void TomarBodega(object sender, EventArgs e)
         {
             bool haySeleccion = false;
             //Llamar método del gestor
             if (gridBodegasActualizar.Rows.Count == 0)
             {
-                MessageBox.Show("No hay bodegas a seleccionar");
+                MessageBox.Show("No hay bodegas a seleccionar ¡Estas al día!");
             }
             else
             {
                 for (int i = 0; i < gridBodegasActualizar.Rows.Count; i++)
                 {
-                    bool seleccionadaBodega = Convert.ToBoolean(gridBodegasActualizar.Rows[i].Cells["Seleccionar"].Value);
+                    bool seleccionadaBodega = Convert.ToBoolean(gridBodegasActualizar.Rows[i].Cells["Seleccionar"].Value); //Obtenemos valor de verdad del checkbox de la fila
                     if (seleccionadaBodega)
                     {
-                        string nombreBodega = Convert.ToString(gridBodegasActualizar.Rows[i].Cells["Bodega"].Value);
+                        string nombreBodega = Convert.ToString(gridBodegasActualizar.Rows[i].Cells["Bodega"].Value); //Obtenemos texto que guarda la celda de la columna "Bodega"
                         GestorImportarActualizacionBodegas.TomarBodega(nombreBodega);
                         gridBodegasActualizar.Rows[i].Cells["Seleccionar"].Value = false;
                         gridBodegasActualizar.Rows[i].Visible = false;
@@ -105,5 +120,8 @@ namespace PPAI
                 }
             }
         }
+
+
+        /*-----METODOS AUXILIARES-----*/
     }
 }

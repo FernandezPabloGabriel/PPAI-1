@@ -4,5 +4,8 @@
     <Compile Update="Boundaries\PantallaImportarActualizacionBodegas.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Recursos Extra\BarraDeCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

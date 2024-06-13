@@ -25,7 +25,9 @@ namespace PPAI.Entidades
             this.periodoActualizacion = periodoActualizacion;
             this.coordenadasUbicacion = coordenadasUbicacion;
         }
-        public string Nombre //mostrarNombre()
+
+        //6°) mostrarNombre()
+        public string Nombre 
         {
             get => nombre;
             set => nombre = value;
@@ -60,26 +62,29 @@ namespace PPAI.Entidades
             set => coordenadasUbicacion = value;
         }
 
-        public static bool ExisteActualizacionDisponible(int periodoActu)
+
+        //5°) Método que comprueba, por medio de la diferencia de meses entre fechas, si una bodega está en su periodo de actualización o no -Devuelve un booleano-
+        /* -----EJEMPLO P.EXPERTO-----
+         * Aplicamos patrón creador porque directamente utilizamos la fechaUltimaActualización de la bodega
+         * y no se la pasamos al gestor para determinar si una bodega está en periodo de actualizacion*/
+        public bool ExisteActualizacionDisponible()
         {
-            //    string filePath = "../Jsons/Bodegas.json";
-            //    
+            DateTime fechaHoy = DateTime.Now; //Obtenemos la fecha de hoy y la guardamos
+            bool actualizacionDisponible = false;
+            int diferenciaMeses = fechaHoy.Month - FechaUltimaActualizacion.Month;
 
-            //    // Leer el contenido del archivo JSON
-            //    string jsonContent = File.ReadAllText(filePath);
+            if (diferenciaMeses > PeriodoActualizacion)
+            {
+                actualizacionDisponible = true;
+            }
+            else if (diferenciaMeses == PeriodoActualizacion && fechaHoy.Day >= FechaUltimaActualizacion.Day)
+            {
+                actualizacionDisponible = true;
+            }
 
-            //    // Deserializar el JSON en un objeto de tipo Persona
-            //    Bodega bodega = JsonConvert.DeserializeObject<Bodega>(jsonContent);
-
-            //    // Usar los datos deserializados
-            //    MessageBox.Show($" {bodega.nombre} {bodega.descripcion} {bodega.historia} {bodega.periodoActualizacion} {bodega.periodoActualizacion} {bodega.coordenadasUbicacion}");
-
-            //   
-            //}
-            bool resultado = false;
-            return resultado;
+            return actualizacionDisponible;
         }
     }
 }
 
-// Falta agregar los metodos contarReseñas(), mostrarTodosVinos(), existeActualizacionDisponible(), mostrarNombre(), actualizarVinos()
+// Falta agregar los metodos contarReseñas(), mostrarTodosVinos(), , mostrarNombre(), actualizarVinos()
